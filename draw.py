@@ -1,4 +1,4 @@
-from time import sleep
+
 from os import system
 
 class Draw_board:
@@ -11,8 +11,9 @@ class Draw_board:
         self.Draw_board()
 
     def piece_to_symbol(self):
-        symbols=['♔','♕','♖','♗','♘','♙','♚','♛','♜','♝','♞','♟']
+        # symbols=['♔','♕','♖','♗','♘','♙','♚','♛','♜','♝','♞','♟']
         pieces=['K','Q','R','B','N','P','k','q','r','b','n','p']
+        symbols = pieces
         d=dict()
         for i in range(12):
             d[pieces[i]]=symbols[i]+' '
@@ -24,8 +25,7 @@ class Draw_board:
             matrix = self.board
         if d is None: 
             d = self.piece_to_symbol
-        sleep(0.2) # to slow down the display
-        system('cls')
+        print("\n"*6)
         l,c=matrix.shape
         for i in 'ABCDEFGH':
             print(' ',i,end='')

@@ -1,8 +1,6 @@
-
-import numpy as np
-
+import random
 class Board:
-    start_board= np.array([
+    start_board= [
             ['R','N','B','Q','K','B','N','R'],
             ['P','P','P','P','P','P','P','P'],
             ['','','','','','','',''],
@@ -11,24 +9,30 @@ class Board:
             ['','','','','','','',''],
             ['p','p','p','p','p','p','p','p'],
             ['r','n','b','q','k','b','n','r']
-        ])
+        ]
     def __init__(self):
         self.board_position = self.start_board
     def setboard(self,board=start_board):
         self.board_position = board
+    def shuffle(arr):
+        new_arr = []
+        for i in range(len(arr)):
+            new_arr.append(arr.pop(random.randint(0,len(arr)-1)))
+        return new_arr
+        
 
     def randomize_board_dirty(self):
         #dirty randomization (no checks for valid positions or if the king is in check)
         arr=self.board_position
         arr = arr.flatten()
-        np.random.shuffle(arr)
+        arr = self.shuffle(arr)
         arr = arr.reshape((8, 8))
         self.board_position=arr
 
     def fen_to_matrix(self,fen):
         fen = fen.split(' ')[0]
         fen = fen.split('/')
-        board = np.array([['']*8 for i in range(8)])
+        board = [['']*8 for i in range(8)]
         for i in range(8):
             j = 0
             for k in fen[i]:

@@ -2,7 +2,7 @@ class Logic:
     def __init__(self, ):
         pass
     def valid_move(self,position, move):
-        pass
+        return True
 
     def valid_syntax(self,move):
         # room for improvement

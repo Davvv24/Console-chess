@@ -1,7 +1,5 @@
 from board import Board
 from draw import Draw_board
-from time import time
-from 
 class ChessGame:
     def __init__(self):
         self.board = Board()
