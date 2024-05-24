@@ -1,6 +1,3 @@
-
-from os import system
-
 class Draw_board:
     def __init__(self,board=None):
         if board is None:
@@ -44,8 +41,7 @@ class Draw_board:
         print('',' --'*(c))
     
 if __name__ == "__main__":
-    import numpy as np
-    board=np.array([
+    board=np.[
             ['R','N','B','Q','K','B','N','R'],
             ['P','P','P','P','P','P','P','P'],
             ['','','','','','','',''],
@@ -53,7 +49,6 @@ if __name__ == "__main__":
             ['','','','','','','',''],
             ['','','','','','','',''],
             ['p','p','p','p','p','p','p','p'],
-            ['r','n','b','q','k','b','n','r']
-        ])
+            ['r','n','b','q','k','b','n','r']]
     chess = Draw_board(board)
     chess.Draw_board()
