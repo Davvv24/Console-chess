@@ -12,6 +12,9 @@ CHESS_BOARD = [ ['r','n','b','q','k','b','n','r'],
 def arr_copy(arr):
     return [[col for col in row] for row in arr]
 
+def arr_copy(arr):
+    return [[col for col in row] for row in arr]
+
 # Board class containing a board array, methods to move pieces on the board, methods for piece coordinates, and useful conversions
 class Board:
     board_position=[]
