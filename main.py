@@ -66,6 +66,7 @@ class ChessGame:
         self.draw.draw_board(self.board.board_position)
         print()
 
+    # TODO: fix game loop
     # Primary game loop. Everything is handled here
     def game_loop(self):
         while not self.game_end:
