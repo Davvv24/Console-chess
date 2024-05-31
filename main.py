@@ -77,6 +77,7 @@ class ChessGame:
                 move_coords = self.engine.best_move(self.board, white)
             self.update_game(move_coords) # handle updates such as game end, check, turn increment
             self.render_game() # Update the game
+            
         print("Game ended.")
 
 # Start game
