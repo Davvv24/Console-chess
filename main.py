@@ -66,7 +66,6 @@ class ChessGame:
         self.draw.draw_board(self.board.board_position)
         print()
 
-    # TODO: fix game loop
     # Primary game loop. Everything is handled here
     def game_loop(self):
         while not self.game_end:
@@ -77,7 +76,6 @@ class ChessGame:
                 move_coords = self.engine.best_move(self.board, white)
             self.update_game(move_coords) # handle updates such as game end, check, turn increment
             self.render_game() # Update the game
-            
         print("Game ended.")
 
 # Start game
